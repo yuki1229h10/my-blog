@@ -1,0 +1,50 @@
+%heading {
+    color: var(--color-primary);
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 4.5rem;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 3.5rem;
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 2rem;
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.6rem;
+}
+
+.sec--title {
+    position: relative;
+    padding: 2rem 3rem;
+    background: linear-gradient(transparent 60%,var(--color-primary-light));
+    &::before {
+        position: absolute;
+        content: "";
+        background: var(--color-primary);
+        top: 15px;
+        left: 10px;
+        height: 12px;
+        width: 12px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        background: var(--color-primary);
+        top: 45px;
+        left: 0;
+        height: 12px;
+        width: 12px;
+        transform: rotate(90deg); 
+    }
+}
