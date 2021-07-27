@@ -93,27 +93,26 @@ function daysInMonth(iMonth, iYear) {
 }
 
 
-
-let todoItem = [];
-
-function addText(text) {
-    const todo = {
-        text,
-        checked: false,
-        id: Date.now()
-    };
-    todoItem.push(todo);
-    console.log(todoItem);
-}
-
 const todoForm = document.getElementById('todoForm');
 todoForm.addEventListener('click', event => {
     event.preventDefault();
     const input = document.getElementById('todoInput');
-    text = input.value.trim();
+    const text = input.value.trim();
     if (text !== '') {
-        addText(text);
+        buildTodo(text);
         input.value = '';
         input.focus();
     }
 })
+
+function buildTodo(text) {
+    const todo = {
+        text,
+        checked: false,
+        id: Date.now()
+    }
+    let li = document.createElement('li');
+    li.className = 'todo__item';
+    li.setAttribute('data', todo.id);
+    li.setAttribute('el', todo.checked);
+}
