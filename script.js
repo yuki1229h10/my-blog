@@ -93,26 +93,147 @@ function daysInMonth(iMonth, iYear) {
 }
 
 
+let todoList = [];
+
 const todoForm = document.getElementById('todoForm');
-todoForm.addEventListener('click', event => {
+todoForm.addEventListener('submit', event => {
     event.preventDefault();
+})
+
+const todoButton = document.getElementById('todoButton');
+todoButton.addEventListener('click', () => {
     const input = document.getElementById('todoInput');
     const text = input.value.trim();
     if (text !== '') {
-        buildTodo(text);
-        input.value = '';
+        addTodo(text);
+        input.value = ''
         input.focus();
     }
 })
 
-function buildTodo(text) {
+function addTodo(text) {
     const todo = {
         text,
         checked: false,
         id: Date.now()
-    }
-    let li = document.createElement('li');
-    li.className = 'todo__item';
-    li.setAttribute('data', todo.id);
-    li.setAttribute('el', todo.checked);
+    };
+    todoList.push(todo);
+    console.log(todoList);
+    renderTodo(todo);
 }
+
+function renderTodo(todo) {
+    let list = document.getElementById('todoList');
+    let li = document.createElement('li');
+    li.setAttribute('class', 'todo__item');
+    li.setAttribute('id', todo.id);
+    li.innerHTML += `
+    <input class="todo__item-input" type="checkbox" id=${todo.checked}>
+    ${todo.text}
+    <svg class="todo__icon">
+    <use xlink:href="img/sprite.svg#icon-cross"></use>
+    </svg>
+    `;
+
+    const children = li.children;
+    Array.from(children).forEach(function (element) {
+        element.addEventListener('click', () => {
+            if (element.checked == true) {
+                element.setAttribute('id', 'true');
+            } else if (element.checked == false) {
+                element.setAttribute('id', 'false');
+            } else if (element.nodeName == 'svg') {
+                element.parentElement.remove();
+                const index = todoList.indexOf(todo);
+                if (index !== -1) {
+                    todoList.splice(index, 1);
+                }
+                console.log(todoList);
+            }
+        })
+    });
+
+    list.appendChild(li);
+    testFn(todo);
+    // let createBtn = (function () {
+    //     let executed = false;
+    //     return function () {
+    //         if (!executed) {
+    //             executed = true;
+    //         }
+    //     }
+    // })
+}
+
+function testFn(todo) {
+
+}
+
+
+
+// 1.アイテムが3つ以上の時にのみ、ボタンを出現させる。
+
+// リストを監視できる状態を作る。
+
+// function judgeFn(){
+//     const index = todoList.length;
+//     if(index >= 3){
+//     }
+// }
+
+// function countItem(list) {
+//     let build;
+//     let wrapper = document.createElement('div');
+//     wrapper.className = 'todo__btn-wrapper';
+//     wrapper.innerHTML = '<button class="todo__btn btn">送信</button>';
+//     if (build !== true) {
+//         list.appendChild(wrapper);
+//     }
+//     build = true;
+//     console.log(build);
+// if (todoList.length >= 3 && count) {
+//     wrapper.setAttribute('class', 'todo__btn-wrapper');
+//     wrapper.innerHTML = '<button class="todo__btn btn">送信</button>';
+//     list.appendChild(wrapper);
+//     console.log(count);
+// } else {
+//     count = false;
+//     console.log(count);
+// }
+// }
+
+// Object.observe(todoList, function (changes) {
+//     changes.forEach(function (change) {
+//         console.log(change.type, change.name, change.oldValue);
+//     });
+// });
+
+const target = {
+    message1: 'hello',
+    message2: 'everyone'
+};
+
+const handler1 = {};
+
+const proxy1 = new Proxy(target, handler1);
+console.log(proxy1.message1);
+console.log(proxy1.message2);
+
+
+const ary = [];
+const q = new Proxy(ary, {
+    get: (target, name) => {
+        console.log(`(get)target : ${JSON.stringify(target)},name : ${name}`);
+        return target[name];
+    },
+    set: (target,name,value)=> {
+        console.log(`(set)target : ${JSON.stringify(target)},name : ${name}`);
+        target[name] = value;
+    }
+});
+
+q.push('a');
+q.push('b');
+q.push('c');
+
+console.log(q[0]);

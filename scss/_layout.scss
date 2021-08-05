@@ -22,10 +22,24 @@
 }
 
 .content--2 {
-    padding: 2rem;
+    padding: 5rem;
     margin: 3rem 0;
-    background-color: var(--color-white);
     font-size: 1.6rem;
-    
+
     display: flex;
+}
+
+.content--3 {
+    padding: 5rem;
+    margin: 3rem 0;
+    font-size: 2rem;
+}
+
+.footer {
+    padding: 3rem;
+    font-size: 1.6rem;
+    background-color: var(--color-black);
+
+    display: flex;
+    justify-content: space-between;
 }
