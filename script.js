@@ -118,8 +118,8 @@ function addTodo(text) {
         id: Date.now()
     };
     todoList.push(todo);
-    console.log(todoList);
     renderTodo(todo);
+    generateBtn();
 }
 
 function renderTodo(todo) {
@@ -147,6 +147,7 @@ function renderTodo(todo) {
                 const index = todoList.indexOf(todo);
                 if (index !== -1) {
                     todoList.splice(index, 1);
+                    generateBtn();
                 }
                 console.log(todoList);
             }
@@ -154,22 +155,90 @@ function renderTodo(todo) {
     });
 
     list.appendChild(li);
-    testFn(todo);
-    // let createBtn = (function () {
-    //     let executed = false;
-    //     return function () {
-    //         if (!executed) {
-    //             executed = true;
-    //         }
-    //     }
-    // })
+    testFn(list);
 }
 
-function testFn(todo) {
+function generateBtn() {
+    let wrapper = document.createElement("div");
+    let btn = document.createElement("button");
+
+    wrapper.className = "todo__btn-wrapper";
+    btn.className = "todo__btn btn";
+
+    // リストの中身が変化するケース、todoを追加したとき、todoを減らしたとき。
+    // リストの中身が三つ以上の場合、送信ボタンを一つだけ表示する。
+    // リストの中身が三つ未満の場合、不可ボタンを一つだけ表示し、クリック不可にする。
+}
+
+// function testFn(list) {
+//     let wrapper = document.createElement("div");
+//     let btn = document.createElement("button");
+//     btn.textContent = "送信";
+//     wrapper.className = "todo__btn-wrapper";
+//     btn.className = "todo__button";
+//     wrapper.appendChild(btn);
+
+//     buildBtn(wrapper, list);
+//     removeBtn(wrapper, list);
+// if (todoList.length >= 3) {
+//     count++;
+//     buildBtn(count, list, wrapper);
+// } else {
+//     count--;
+//     releaseBtn(count, list, wrapper);
+// }
+// }
+
+// function buildBtn(wrapper, list) {
+//     if (todoList.length >= 3) {
+//         list.appendChild(wrapper);
+//     }
+// }
+
+// function removeBtn(wrapper, list) {
+//     if (todoList.length < 3) {
+//         wrapper.remove();
+//     }
+// }
+
+// function buildBtn(count, list, wrapper) {
+//     let executed = false;
+//     return function () {
+//         if (!executed && count == 1) {
+//             executed = true;
+//             list.appendChild(wrapper);
+//         }
+//     }
+// }
+
+// function buildBtn = (count, list, wrapper) => {
+//     let executed = false;
+//     return function () {
+//         if (!executed && count) {
+//             executed = true;
+//             list.appendChild(wrapper);
+//         }
+//     }
+// }
+
+// function buildBtn(count, list, wrapper) {
+
+// }
+
+function releaseBtn(count, list, wrapper) {
 
 }
 
-
+// function buildBtn(count, list) {
+//     let wrapper = document.createElement("div");
+//     let btn = document.createElement("button");
+//     wrapper.innerHTML = btn;
+//     wrapper.className = "todo__btn-wrapper";
+//     btn.className = "todo__btn";
+//     if (count != 0) {
+//         list.appendChild(wrapper);
+//     }
+// }
 
 // 1.アイテムが3つ以上の時にのみ、ボタンを出現させる。
 
@@ -208,32 +277,32 @@ function testFn(todo) {
 //     });
 // });
 
-const target = {
-    message1: 'hello',
-    message2: 'everyone'
-};
+// const target = {
+//     message1: 'hello',
+//     message2: 'everyone'
+// };
 
-const handler1 = {};
+// const handler1 = {};
 
-const proxy1 = new Proxy(target, handler1);
-console.log(proxy1.message1);
-console.log(proxy1.message2);
+// const proxy1 = new Proxy(target, handler1);
+// console.log(proxy1.message1);
+// console.log(proxy1.message2);
 
 
-const ary = [];
-const q = new Proxy(ary, {
-    get: (target, name) => {
-        console.log(`(get)target : ${JSON.stringify(target)},name : ${name}`);
-        return target[name];
-    },
-    set: (target,name,value)=> {
-        console.log(`(set)target : ${JSON.stringify(target)},name : ${name}`);
-        target[name] = value;
-    }
-});
+// const ary = [];
+// const q = new Proxy(ary, {
+//     get: (target, name) => {
+//         console.log(`(get)target : ${JSON.stringify(target)},name : ${name}`);
+//         return target[name];
+//     },
+//     set: (target,name,value)=> {
+//         console.log(`(set)target : ${JSON.stringify(target)},name : ${name}`);
+//         target[name] = value;
+//     }
+// });
 
-q.push('a');
-q.push('b');
-q.push('c');
+// q.push('a');
+// q.push('b');
+// q.push('c');
 
-console.log(q[0]);
+// console.log(q[0]);
