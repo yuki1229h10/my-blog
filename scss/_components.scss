@@ -1,3 +1,18 @@
+.btn {
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    // transition: all 0.2s;
+
+    // &:hover {
+    //     @include floating;
+    // }
+}
+
 /////////////////////////////////
 ////// HEADER
 
@@ -324,6 +339,7 @@
 
 .calendar {
     flex: 1;
+    margin-right: 3rem;
 
     &__title {
         margin-bottom: 2rem;
@@ -410,9 +426,7 @@
         margin-bottom: 2rem;
     }
 
-    &__form {
-        width: 80%;
-        margin: 0 auto;
+    &__flex {
         margin-bottom: 4rem;
         border: 3px solid var(--color-primary);
 
@@ -447,7 +461,7 @@
     &__list {
         width: 80%;
         margin: 0 auto;
-        background-color: khaki;
+        margin-bottom: 4rem;
     }
 
     &__item {
@@ -469,25 +483,20 @@
         margin-left: auto;
         cursor: pointer;
     }
+
+    &__btn-wrapper {
+        text-align: center;
+    }
+
+    &__btn {
+        width: 150px;
+        opacity: 0.2;
+        cursor: auto; 
+    }
 }
 
 /////////////////////////////////
 ////// CONTENT--3
-
-.btn {
-    padding: 2rem;
-    font-size: 2rem;
-    font-weight: 700;
-    cursor: pointer;
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    border-radius: 10px;
-    transition: all 0.2s;
-
-    &:hover {
-        @include floating;
-    }
-}
 
 .contact {
     &__form {

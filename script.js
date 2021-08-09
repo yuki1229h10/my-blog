@@ -95,13 +95,9 @@ function daysInMonth(iMonth, iYear) {
 
 let todoList = [];
 
-const todoForm = document.getElementById('todoForm');
-todoForm.addEventListener('submit', event => {
-    event.preventDefault();
-})
-
 const todoButton = document.getElementById('todoButton');
-todoButton.addEventListener('click', () => {
+todoButton.addEventListener('click', (event) => {
+    event.preventDefault();
     const input = document.getElementById('todoInput');
     const text = input.value.trim();
     if (text !== '') {
@@ -119,7 +115,6 @@ function addTodo(text) {
     };
     todoList.push(todo);
     renderTodo(todo);
-    generateBtn();
 }
 
 function renderTodo(todo) {
@@ -147,28 +142,62 @@ function renderTodo(todo) {
                 const index = todoList.indexOf(todo);
                 if (index !== -1) {
                     todoList.splice(index, 1);
-                    generateBtn();
+                    obTodoList(sendBtn);
                 }
-                console.log(todoList);
             }
         })
     });
 
     list.appendChild(li);
-    testFn(list);
+    obTodoList(sendBtn);
 }
 
-function generateBtn() {
-    let wrapper = document.createElement("div");
-    let btn = document.createElement("button");
+function obTodoList(target) {
+    console.log(target);
+}
 
-    wrapper.className = "todo__btn-wrapper";
-    btn.className = "todo__btn btn";
+// function obTodoList() {
+//     alert('ok')
+// }
+
+// const todoSendBtn = document.getElementById("todoSendBtn");
+// todoSendBtn.addEventListener("click",(event)=>{
+//     if(todoList.length < 3) {
+//         event.preventDefault();
+//     } else if(todoList.length >= 3) {
+//         todoButton.classList.remove(".todo__btn");
+//     }
+// })
+
+// function obSendBtn() {
+//     const btn = document.getElementById("todoSendBtn");
+//     if(todoList.length < 3) {
+//         btn.preventDefault();
+//     }
+// }
+
+// console.log(todoSendBtn);
+// function generateBtn(list) {
+    // let wrapper = document.createElement("div");
+    // wrapper.innerHTML = "<button class='todo__btn btn'>送信</button>";
+
+    // wrapper.className = "todo__btn-wrapper";
+    // // btn.className = "todo__btn btn";
+
+    // if (todoList.length == 3) {
+    //     list.appendChild(wrapper);
+    // }
+
+    // const createdEl = document.getElementsByClassName("todo__btn-wrapper");
+    // console.log(createdEl);
 
     // リストの中身が変化するケース、todoを追加したとき、todoを減らしたとき。
     // リストの中身が三つ以上の場合、送信ボタンを一つだけ表示する。
     // リストの中身が三つ未満の場合、不可ボタンを一つだけ表示し、クリック不可にする。
-}
+
+//     const btn = document.getElementById("todoBtn");
+//     console.log(btn);
+// }
 
 // function testFn(list) {
 //     let wrapper = document.createElement("div");
@@ -225,9 +254,9 @@ function generateBtn() {
 
 // }
 
-function releaseBtn(count, list, wrapper) {
+// function releaseBtn(count, list, wrapper) {
 
-}
+// }
 
 // function buildBtn(count, list) {
 //     let wrapper = document.createElement("div");
@@ -306,3 +335,6 @@ function releaseBtn(count, list, wrapper) {
 // q.push('c');
 
 // console.log(q[0]);
+
+// 
+// const 

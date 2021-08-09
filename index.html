@@ -336,11 +336,19 @@
             <div class="todo">
                 <h2 class="heading-2 todo__title">To Do List</h2>
                 <form action="" class="todo__form" id="todoForm">
-                    <input class="todo__input" type="text" id="todoInput">
-                    <button class="todo__button" id="todoButton">add</button>
+                    <div class="todo__flex">
+                        <input class="todo__input" type="text" id="todoInput">
+                        <button class="todo__button" id="todoButton">add</button>
+                    </div>
+                    <ul class="todo__list" id="todoList"></ul>
+                    <div class="todo__btn-wrapper">
+                        <button class="todo__btn btn" id="todoSendBtn">送信</button>
+                    </div>
                 </form>
-                <ul class="todo__list" id="todoList">
-                    <!-- <li class="todo__item">
+                <!-- <form action="" class="todo__form" id="todoForm">
+                </form>
+                <ul class="todo__list" id="todoList"> -->
+                <!-- <li class="todo__item">
                         <svg class="todo__icon">
                             <use xlink:href="img/sprite.svg#icon-cross"></use>
                         </svg>
@@ -350,7 +358,7 @@
                             <use xlink:href="img/sprite.svg#icon-cross"></use>
                         </svg>
                     </li> -->
-                    <!-- <li class="todo__item">
+                <!-- <li class="todo__item">
                         <svg class="todo__icon">
                             <use xlink:href="img/sprite.svg#icon-cross"></use>
                         </svg>
