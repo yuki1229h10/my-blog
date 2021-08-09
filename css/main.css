@@ -193,6 +193,16 @@ main {
   }
 }
 
+.btn {
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+
 .top {
   padding: 3rem 0;
   text-align: center;
@@ -570,6 +580,7 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-right: 3rem;
 }
 
 .calendar__title {
@@ -665,9 +676,7 @@ main {
   margin-bottom: 2rem;
 }
 
-.todo__form {
-  width: 80%;
-  margin: 0 auto;
+.todo__flex {
   margin-bottom: 4rem;
   border: 3px solid var(--color-primary);
   display: -webkit-box;
@@ -709,7 +718,7 @@ main {
 .todo__list {
   width: 80%;
   margin: 0 auto;
-  background-color: khaki;
+  margin-bottom: 4rem;
 }
 
 .todo__item {
@@ -735,23 +744,14 @@ main {
   cursor: pointer;
 }
 
-.btn {
-  padding: 2rem;
-  font-size: 2rem;
-  font-weight: 700;
-  cursor: pointer;
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  border-radius: 10px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+.todo__btn-wrapper {
+  text-align: center;
 }
 
-.btn:hover {
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
-  -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow);
+.todo__btn {
+  width: 150px;
+  opacity: 0.2;
+  cursor: auto;
 }
 
 .contact__form {
