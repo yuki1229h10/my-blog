@@ -104,8 +104,21 @@ todoButton.addEventListener('click', (event) => {
         addTodo(text);
         input.value = ''
         input.focus();
+    } else {
+        alert("何も入力されていません");
     }
 })
+
+const todoSendBtn = document.getElementById('todoSendBtn');
+todoSendBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    funcTest(event);
+})
+
+function funcTest(event){
+    alert("ok");
+    console.log(event)
+}
 
 function addTodo(text) {
     const todo = {
@@ -142,199 +155,10 @@ function renderTodo(todo) {
                 const index = todoList.indexOf(todo);
                 if (index !== -1) {
                     todoList.splice(index, 1);
-                    obTodoList(sendBtn);
                 }
             }
         })
     });
 
     list.appendChild(li);
-    obTodoList(sendBtn);
 }
-
-function obTodoList(target) {
-    console.log(target);
-}
-
-// function obTodoList() {
-//     alert('ok')
-// }
-
-// const todoSendBtn = document.getElementById("todoSendBtn");
-// todoSendBtn.addEventListener("click",(event)=>{
-//     if(todoList.length < 3) {
-//         event.preventDefault();
-//     } else if(todoList.length >= 3) {
-//         todoButton.classList.remove(".todo__btn");
-//     }
-// })
-
-// function obSendBtn() {
-//     const btn = document.getElementById("todoSendBtn");
-//     if(todoList.length < 3) {
-//         btn.preventDefault();
-//     }
-// }
-
-// console.log(todoSendBtn);
-// function generateBtn(list) {
-    // let wrapper = document.createElement("div");
-    // wrapper.innerHTML = "<button class='todo__btn btn'>送信</button>";
-
-    // wrapper.className = "todo__btn-wrapper";
-    // // btn.className = "todo__btn btn";
-
-    // if (todoList.length == 3) {
-    //     list.appendChild(wrapper);
-    // }
-
-    // const createdEl = document.getElementsByClassName("todo__btn-wrapper");
-    // console.log(createdEl);
-
-    // リストの中身が変化するケース、todoを追加したとき、todoを減らしたとき。
-    // リストの中身が三つ以上の場合、送信ボタンを一つだけ表示する。
-    // リストの中身が三つ未満の場合、不可ボタンを一つだけ表示し、クリック不可にする。
-
-//     const btn = document.getElementById("todoBtn");
-//     console.log(btn);
-// }
-
-// function testFn(list) {
-//     let wrapper = document.createElement("div");
-//     let btn = document.createElement("button");
-//     btn.textContent = "送信";
-//     wrapper.className = "todo__btn-wrapper";
-//     btn.className = "todo__button";
-//     wrapper.appendChild(btn);
-
-//     buildBtn(wrapper, list);
-//     removeBtn(wrapper, list);
-// if (todoList.length >= 3) {
-//     count++;
-//     buildBtn(count, list, wrapper);
-// } else {
-//     count--;
-//     releaseBtn(count, list, wrapper);
-// }
-// }
-
-// function buildBtn(wrapper, list) {
-//     if (todoList.length >= 3) {
-//         list.appendChild(wrapper);
-//     }
-// }
-
-// function removeBtn(wrapper, list) {
-//     if (todoList.length < 3) {
-//         wrapper.remove();
-//     }
-// }
-
-// function buildBtn(count, list, wrapper) {
-//     let executed = false;
-//     return function () {
-//         if (!executed && count == 1) {
-//             executed = true;
-//             list.appendChild(wrapper);
-//         }
-//     }
-// }
-
-// function buildBtn = (count, list, wrapper) => {
-//     let executed = false;
-//     return function () {
-//         if (!executed && count) {
-//             executed = true;
-//             list.appendChild(wrapper);
-//         }
-//     }
-// }
-
-// function buildBtn(count, list, wrapper) {
-
-// }
-
-// function releaseBtn(count, list, wrapper) {
-
-// }
-
-// function buildBtn(count, list) {
-//     let wrapper = document.createElement("div");
-//     let btn = document.createElement("button");
-//     wrapper.innerHTML = btn;
-//     wrapper.className = "todo__btn-wrapper";
-//     btn.className = "todo__btn";
-//     if (count != 0) {
-//         list.appendChild(wrapper);
-//     }
-// }
-
-// 1.アイテムが3つ以上の時にのみ、ボタンを出現させる。
-
-// リストを監視できる状態を作る。
-
-// function judgeFn(){
-//     const index = todoList.length;
-//     if(index >= 3){
-//     }
-// }
-
-// function countItem(list) {
-//     let build;
-//     let wrapper = document.createElement('div');
-//     wrapper.className = 'todo__btn-wrapper';
-//     wrapper.innerHTML = '<button class="todo__btn btn">送信</button>';
-//     if (build !== true) {
-//         list.appendChild(wrapper);
-//     }
-//     build = true;
-//     console.log(build);
-// if (todoList.length >= 3 && count) {
-//     wrapper.setAttribute('class', 'todo__btn-wrapper');
-//     wrapper.innerHTML = '<button class="todo__btn btn">送信</button>';
-//     list.appendChild(wrapper);
-//     console.log(count);
-// } else {
-//     count = false;
-//     console.log(count);
-// }
-// }
-
-// Object.observe(todoList, function (changes) {
-//     changes.forEach(function (change) {
-//         console.log(change.type, change.name, change.oldValue);
-//     });
-// });
-
-// const target = {
-//     message1: 'hello',
-//     message2: 'everyone'
-// };
-
-// const handler1 = {};
-
-// const proxy1 = new Proxy(target, handler1);
-// console.log(proxy1.message1);
-// console.log(proxy1.message2);
-
-
-// const ary = [];
-// const q = new Proxy(ary, {
-//     get: (target, name) => {
-//         console.log(`(get)target : ${JSON.stringify(target)},name : ${name}`);
-//         return target[name];
-//     },
-//     set: (target,name,value)=> {
-//         console.log(`(set)target : ${JSON.stringify(target)},name : ${name}`);
-//         target[name] = value;
-//     }
-// });
-
-// q.push('a');
-// q.push('b');
-// q.push('c');
-
-// console.log(q[0]);
-
-// 
-// const 
