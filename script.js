@@ -112,10 +112,10 @@ todoButton.addEventListener('click', (event) => {
 const todoSendBtn = document.getElementById('todoSendBtn');
 todoSendBtn.addEventListener("click", function (event) {
     event.preventDefault();
-    funcTest(event);
+    todoCheck(event);
 })
 
-function funcTest(event){
+function todoCheck(event) {
     alert("ok");
     console.log(event)
 }
