@@ -6,11 +6,6 @@
     color: var(--color-white);
     background-color: var(--color-primary);
     border-radius: 10px;
-    // transition: all 0.2s;
-
-    // &:hover {
-    //     @include floating;
-    // }
 }
 
 /////////////////////////////////
@@ -220,6 +215,10 @@
     &__link {
         @include over-link;
     }
+}
+
+.article {
+    background-color: blue;
 }
 
 /////////////////////////////////
