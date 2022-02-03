@@ -1,11 +1,12 @@
 .btn {
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    font-weight: 700;
-    cursor: pointer;
-    color: var(--color-white);
     background-color: var(--color-primary);
     border-radius: 10px;
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1.5rem;
+    width: 10rem;
 }
 
 /////////////////////////////////
@@ -13,97 +14,23 @@
 
 .top {
     padding: 3rem 0;
+    position: relative;
     text-align: center;
 
     &__sub-title {
+        animation: move-to-right 2s;
+        color: var(--color-primary);
         font-size: 1.6rem;
         font-weight: 600;
-        color: var(--color-primary);
-
-        animation: move-to-right 2s;
     }
 
     &__title {
         animation: move-to-left 2s;
     }
-}
-
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 5%;
-    margin-bottom: 3rem;
-
-    &__search {
-        display: flex;
-        align-items: center;
-        margin-right: 6rem;
-    }
-
-    &__input {
-        font-size: inherit;
-        font-family: inherit;
-        padding: 1rem;
-        padding-right: 3.5rem;
-        outline: none;
-        color: var(--color-black);
-        background-color: var(--color-white);
-        border: 3px solid var(--color-primary);
-        border-radius: 20px;
-        margin-right: -3rem;
-    }
-
-    &__button {
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    &__icon {
-        width: 2rem;
-        height: 2rem;
-        fill: var(--color-primary);
-        transition: all 0.2s;
-
-        &:hover {
-            opacity: var(--opacity);
-        }
-    }
-
-    &__user {
-        display: flex;
-    }
-
-    &__item {
-        position: relative;
-        transition: all 0.2s;
-
-        &:not(:last-child) {
-            margin-right: 3rem;
-        }
-
-        &:hover {
-            opacity: var(--opacity);
-        }
-    }
-
-    &__u-icon {
-        width: 4rem;
-        height: 4rem;
-    }
 
     &__link {
         @include over-link;
     }
-}
-
-.twitter--icon {
-    fill: var(--color-twitter);
-}
-
-.github--icon {
-    fill: var(--color-black);
 }
 
 .under {
@@ -141,6 +68,18 @@
         text-decoration: none;
         font-size: 2rem;
         font-weight: 600;
+    }
+}
+
+.search {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    background-color: red;
+
+    &__icon {
+        display: block;
+        background-color: aliceblue;
     }
 }
 
@@ -218,7 +157,94 @@
 }
 
 .article {
-    background-color: blue;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 3rem;
+    &__title {
+        color: var(--color-black);
+    }
+
+    &__time-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: end;
+        margin-bottom: 2rem;
+    }
+
+    &__img-wrapper {
+        margin-bottom: 4rem;
+    }
+
+    &__img {
+    }
+
+    &__contents {
+        background-color: var(--color-white2);
+        border: 3px solid var(--color-primary);
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+    }
+
+    &__contents-title {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        padding: 1rem;
+        text-align: center;
+    }
+
+    &__list {
+        margin-left: 2rem;
+        padding: 2rem;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        &::marker {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    }
+
+    &__item-link {
+        font-size: 1.6rem;
+        font-weight: 700;
+        transition: all 0.2s;
+        &:hover {
+            opacity: var(--opacity);
+        }
+    }
+
+    &__sub-title {
+        background: #f7f7f7;
+        border-bottom: solid 3px #dadada;
+        border-left: solid var(--color-primary) 5px;
+        clear: both;
+        color: var(--color-black);
+        margin-bottom: 2rem;
+        padding: 14px 12px;
+    }
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__side {
+        border-radius: 10px;
+        background-color: transparent;
+    }
+
+    &__bar {
+        background-color: var(--color-white);
+        border-radius: 10px;
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+    }
 }
 
 /////////////////////////////////
@@ -327,7 +353,6 @@
         transition: all 0.2s;
 
         &:hover {
-            // opacity: var(--opacity);
             transform: translateY(-3px);
         }
     }
