@@ -1,22 +1,16 @@
 :root {
-    --color-primary: #ff00ff;
-    --color-primary-light: #ff99ff;
-    --color-primary-dark: #800080;
-
     --color-black: #000;
-
+    --color-cream: #efefef;
+    --color-green: #00fa9a;
+    --color-primary: #ff00ff;
+    --color-primary-dark: #800080;
+    --color-primary-light: pink;
+    --color-twitter: #00acee;
     --color-white: #fff;
     --color-white2: #f7f7f7;
     --color-white3: #dadada;
-
-    --color-cream: #efefef;
-
-    --color-green: #00fa9a;
-
-    --color-twitter: #00acee;
-
-    --shadow: 0 2rem 2rem rgba(131, 86, 86, 0.2);
     --opacity: 0.6;
+    --shadow: 0 2rem 2rem rgba(131, 86, 86, 0.2);
 }
 
 * {
@@ -42,12 +36,11 @@ body {
     font-family: "Gill Sans", sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    min-height: 100vh;
 }
 
 main {
-    max-width: 1256px;
     margin: 4rem auto;
+    max-width: 1256px;
 }
 
 a {
