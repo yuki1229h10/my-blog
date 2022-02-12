@@ -1,6 +1,5 @@
 .header {
     align-items: center;
-    // background: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
     background-color: var(--color-primary);
     display: flex;
     justify-content: space-between;
@@ -222,6 +221,7 @@
 
 .article {
     background-color: var(--color-white);
+    border: 3px solid var(--color-white4);
     border-radius: 10px;
     padding: 3rem;
     &__title {
@@ -301,6 +301,7 @@
 
     &__bar {
         background-color: var(--color-white);
+        border: 3px solid var(--color-white4);
         border-radius: 10px;
         &:not(:last-child) {
             margin-bottom: 4rem;
@@ -351,40 +352,39 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        list-style: none;
     }
 
-    &__item {
-        position: relative;
-        &:not(:last-child) {
-            margin-bottom: 2rem;
-        }
+    // &__item {
+    //     position: relative;
+    //     &:not(:last-child) {
+    //         margin-bottom: 2rem;
+    //     }
 
-        &::before {
-            position: absolute;
-            content: "";
-            left: -100%;
-            top: 10px;
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-bottom: 10px solid var(--color-primary);
-            transform: rotate(90deg);
-        }
-    }
+    //     &::before {
+    //         position: absolute;
+    //         content: "";
+    //         left: -100%;
+    //         top: 10px;
+    //         width: 0;
+    //         height: 0;
+    //         border-left: 5px solid transparent;
+    //         border-right: 5px solid transparent;
+    //         border-bottom: 10px solid var(--color-primary);
+    //         transform: rotate(90deg);
+    //     }
+    // }
 
-    &__ca-link {
-        font-size: 2rem;
-        font-weight: 600;
-        text-decoration: none;
-        color: var(--color-black);
-        transition: all 0.2s;
+    // &__ca-link {
+    //     font-size: 2rem;
+    //     font-weight: 600;
+    //     text-decoration: none;
+    //     color: var(--color-black);
+    //     transition: all 0.2s;
 
-        &:hover {
-            opacity: var(--opacity);
-        }
-    }
+    //     &:hover {
+    //         opacity: var(--opacity);
+    //     }
+    // }
 
     &__archive {
         font-size: inherit;
