@@ -64,9 +64,7 @@
     }
 
     &__search-icon {
-        position: relative;
-        top: 5px;
-        width: 5rem;
+        fill: var(--color-white);
     }
 }
 
@@ -158,6 +156,8 @@
     grid-template-rows: repeat(5, 1fr);
 
     &__item {
+        border: 3px solid var(--color-white4);
+        border-radius: 10px;
         background-color: var(--color-white);
         padding: 3rem;
         position: relative;
@@ -313,7 +313,6 @@
     padding: 2rem;
 
     &__title {
-        margin-bottom: 2rem;
         text-align: center;
     }
 
@@ -349,42 +348,36 @@
     }
 
     &__list {
-        align-items: center;
         display: flex;
         flex-direction: column;
+        padding: 2rem;
     }
 
-    // &__item {
-    //     position: relative;
-    //     &:not(:last-child) {
-    //         margin-bottom: 2rem;
-    //     }
+    &__item {
+        list-style-type: none;
+        padding-left: 0.6em;
+        position: relative;
 
-    //     &::before {
-    //         position: absolute;
-    //         content: "";
-    //         left: -100%;
-    //         top: 10px;
-    //         width: 0;
-    //         height: 0;
-    //         border-left: 5px solid transparent;
-    //         border-right: 5px solid transparent;
-    //         border-bottom: 10px solid var(--color-primary);
-    //         transform: rotate(90deg);
-    //     }
-    // }
+        &::before {
+            background: var(--color-primary);
+            border-radius: 50%;
+            content: "";
+            display: block;
+            height: 5px;
+            left: 0;
+            position: absolute;
+            top: 0.6em;
+            width: 5px;
+        }
 
-    // &__ca-link {
-    //     font-size: 2rem;
-    //     font-weight: 600;
-    //     text-decoration: none;
-    //     color: var(--color-black);
-    //     transition: all 0.2s;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
 
-    //     &:hover {
-    //         opacity: var(--opacity);
-    //     }
-    // }
+    &__ca-link {
+        color: var(--color-primary);
+    }
 
     &__archive {
         font-size: inherit;
@@ -399,6 +392,25 @@
         &:hover {
             transform: translateY(-3px);
         }
+    }
+
+    &__tag-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    &__tag {
+        background-color: var(--color-primary);
+        border-radius: 10px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    &__tag-link {
+        color: var(--color-white);
     }
 }
 

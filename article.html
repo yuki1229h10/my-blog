@@ -35,7 +35,9 @@
                 </li>
                 <li class="header__under-item">
                     <a href="#" class="header__under-link">
-                        <img src="img/search.png" alt="search" class="header__search-icon">
+                        <svg class="header__search-icon area__icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
                     </a>
                 </li>
             </ul>
@@ -94,29 +96,45 @@
                     <h3 class="heading-3 bar__title">カテゴリー</h3>
                     <ul class="bar__list">
                         <li class="bar__item">
-                            <a href="#" class="bar__ca-link">りんご</a>
+                            <a href="#" class="bar__ca-link">ホーム</a>
                         </li>
                         <li class="bar__item">
-                            <a href="#" class="bar__ca-link">りんご</a>
+                            <a href="#" class="bar__ca-link">IT</a>
                         </li>
                         <li class="bar__item">
-                            <a href="#" class="bar__ca-link">りんご</a>
+                            <a href="#" class="bar__ca-link">英語</a>
+                        </li>
+                        <li class="bar__item">
+                            <a href="#" class="bar__ca-link">読書</a>
+                        </li>
+                        <li class="bar__item">
+                            <a href="#" class="bar__ca-link">その他</a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="bar article__bar">
-                    <h3 class="heading-3 bar__title">アーカイブ</h3>
-                    <select name="side-archive" id="side-archive" class="bar__archive">
-                        <option value="月を選択する">月を選択する</option>
-                        <option value="2021年6月">2021年6月</option>
-                        <option value="2021年7月">2021年7月</option>
-                        <option value="2021年8月">2021年8月</option>
-                    </select>
-                </div>
-                <div class="bar article__bar">
-                    <h3 class="heading-3 bar__title">検索</h3>
-                    <input type="text">
+                    <h3 class="heading-3 bar__title">タグ</h3>
+                    <div class="bar__tag-wrapper">
+                        <div class="bar__tag">
+                            <a href="#" class="bar__tag-link">猗窩座</a>
+                        </div>
+                        <div class="bar__tag">
+                            <a href="#" class="bar__tag-link">Computer</a>
+                        </div>
+                        <div class="bar__tag">
+                            <a href="#" class="bar__tag-link">猗窩座</a>
+                        </div>
+                        <div class="bar__tag">
+                            <a href="#" class="bar__tag-link">JavaScript</a>
+                        </div>
+                        <div class="bar__tag">
+                            <a href="#" class="bar__tag-link">TypeScript</a>
+                        </div>
+                        <div class="bar__tag">
+                            <a href="#" class="bar__tag-link">猗窩座</a>
+                        </div>
+                    </div>
                 </div>
 
             </aside>
