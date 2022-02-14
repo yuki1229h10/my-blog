@@ -35,7 +35,7 @@
                 </li>
                 <li class="header__under-item">
                     <a href="#" class="header__under-link">
-                        <svg class="header__search-icon area__icon">
+                        <svg class="header__search-icon">
                             <use xlink:href="img/sprite.svg#icon-search"></use>
                         </svg>
                     </a>
@@ -47,7 +47,11 @@
         <div class="content">
             <div class="details">
                 <div class="article">
-                    <h2 class="article__title heading-2">タイトル</h2>
+                    <h2 class="article__title heading-2">
+                        面白くなってきたな面白くなってきたな面白くなってきたな面白くなってきたな面白くなってきたな面白くなってきたな面白くなってきたな面白くなってきたな</h2>
+                    <div class="article__ca">
+                        <a href="#" class="article__ca-link">cate</a>
+                    </div>
                     <div class="article__time-wrapper">
                         <svg class="area__icon">
                             <use xlink:href="img/sprite.svg#icon-clock"></use>
@@ -59,10 +63,14 @@
                     </figure>
                     <div class="article__contents">
                         <h3 class="article__contents-title heading-3">この記事の目次</h3>
-                        <ol class="article__list">
-                            <li class="article__item"><a href="#" class="article__item-link">目次だよ</a></li>
-                            <li class="article__item"><a href="#" class="article__item-link">目次だよ</a></li>
-                        </ol>
+                        <ul class="article__list">
+                            <li class="article__item"><a href="#" class="article__item-link">
+                                    <span class="article__item-number">1</span> 目次だよ</a>
+                            </li>
+                            <li class="article__item"><a href="#" class="article__item-link">
+                                    <span class="article__item-number">2</span> 目次だよ</a>
+                            </li>
+                        </ul>
                     </div>
                     <h3 class="article__sub-title heading-3">テキスト</h3>
                     <p class="article__text">
@@ -72,6 +80,10 @@
                     <p class="article__text">
                         テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
                     </p>
+                    <h3 class="article__con-title heading-3">まとめ</h2>
+                        <p class="article__text">
+                            テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+                        </p>
                 </div>
             </div>
             <aside class="side">
@@ -140,32 +152,33 @@
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
+                <div class="bar">
+                    <h3 class="heading-3 bar__title">Yuki</h3>
+                    <div class="bar__img-wrapper">
+                        <img src="img/profile.jpg" alt="" class="bar__img">
+                    </div>
+                    <div class="bar__box">
+                        <div class="bar__flex">
+                            <div class="bar__icon-wrapper">
+                                <svg class="bar__icon bar__icon-twitter">
+                                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                                </svg>
+                                <a href="#" class="bar__icon-link"></a>
+                            </div>
+                            <div class="bar__icon-wrapper">
+                                <svg class="bar__icon">
+                                    <use xlink:href="img/sprite.svg#icon-github"></use>
+                                </svg>
+                                <a href="#" class="bar__icon-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </aside>
         </div>
     </main>
     <footer class="footer">
-        <nav class="footer__left">
-            <ul class="footer__left-list">
-                <li class="footer__left-item">
-                    <a href="" class="footer__left-link">ホーム</a>
-                </li>
-                <li class="footer__left-item">
-                    <a href="" class="footer__left-link">IT</a>
-                </li>
-                <li class="footer__left-item">
-                    <a href="" class="footer__left-link">英語</a>
-                </li>
-                <li class="footer__left-item">
-                    <a href="" class="footer__left-link">読書</a>
-                </li>
-                <li class="footer__left-item">
-                    <a href="" class="footer__left-link">その他</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="footer__right">
-            <span class="footer__right-text">&copy; 2022 Yuki</span>
-        </div>
+        <div class="footer__text">&copy; 2022 Yuki</div>
     </footer>
     <script src="script.js"></script>
 </body>
