@@ -82,37 +82,6 @@ p {
   font-size: 1.6rem;
 }
 
-.sec--title {
-  position: relative;
-  padding: 2rem 3rem;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), to(var(--color-primary)));
-  background: linear-gradient(transparent 60%, var(--color-primary));
-}
-
-.sec--title::before {
-  position: absolute;
-  content: "";
-  background: var(--color-primary);
-  top: 15px;
-  left: 10px;
-  height: 12px;
-  width: 12px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.sec--title::after {
-  position: absolute;
-  content: "";
-  background: var(--color-primary);
-  top: 45px;
-  left: 0;
-  height: 12px;
-  width: 12px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
 .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -207,6 +176,60 @@ p {
   position: relative;
   top: 5px;
   width: 3rem;
+}
+
+.header-search {
+  background-color: var(--color-white);
+  border-bottom: 3px solid var(--color-white4);
+  display: none;
+  font-size: 1.6rem;
+  left: 0;
+  padding: 4rem;
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  z-index: 50;
+}
+
+.header-search__form {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.header-search__input {
+  border: 2px solid var(--color-white4);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 95%;
+          flex: 0 1 95%;
+  font-size: inherit;
+  height: 5rem;
+  outline: none;
+  padding: 1rem;
+}
+
+.header-search__button {
+  border: none;
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 5rem;
+  outline: none;
+}
+
+.header-search__icon {
+  fill: var(--color-black);
+  width: 2rem;
+  height: 2rem;
 }
 
 .content {
@@ -362,7 +385,6 @@ p {
   background-color: var(--color-white2);
   border: 3px solid var(--color-white4);
   border-radius: 10px;
-  margin-bottom: 4rem;
 }
 
 .article__contents-title {
@@ -383,25 +405,19 @@ p {
   border-bottom: 2px solid var(--color-white3);
 }
 
-.article__item::marker {
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
 .article__item-link {
   color: var(--color-twitter);
+  display: block;
   font-size: 1.6rem;
   font-weight: 700;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
 .article__item-link:hover {
-  opacity: var(--opacity);
+  text-decoration: underline;
 }
 
 .article__sub-title {
-  margin-bottom: 2rem;
+  margin: 6rem 0 2rem;
   position: relative;
 }
 
@@ -431,35 +447,6 @@ p {
 
 .article__text:not(:last-child) {
   margin-bottom: 2rem;
-}
-
-.article__con-title {
-  margin: 4rem 0 4rem;
-  position: relative;
-}
-
-.article__con-title::before {
-  content: "";
-  background-color: var(--color-primary);
-  border-radius: 6px;
-  width: 20%;
-  height: 3px;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  z-index: 2;
-}
-
-.article__con-title::after {
-  content: "";
-  background-color: #f2f2f2;
-  border-radius: 6px;
-  width: 100%;
-  height: 3px;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  z-index: 1;
 }
 
 .bar {
@@ -516,19 +503,20 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2rem;
+  margin-top: 2rem;
 }
 
 .bar__tag {
-  background-color: var(--color-primary);
-  border-radius: 10px;
-  margin-right: 1rem;
   margin-bottom: 1rem;
-  padding: 1rem;
+  margin-right: 1rem;
 }
 
 .bar__tag-link {
+  background-color: var(--color-primary);
+  border-radius: 10px;
   color: var(--color-white);
+  display: inline-block;
+  padding: 1rem;
 }
 
 .bar__img-wrapper {
@@ -538,7 +526,7 @@ p {
 }
 
 .bar__img {
-  border: 2px solid var(--color-primary);
+  border: 3px solid var(--color-primary);
   border-radius: 50%;
 }
 
@@ -546,8 +534,9 @@ p {
   padding: 2rem;
 }
 
-.bar__text:not(:last-child) {
-  margin-bottom: 1rem;
+.bar__text {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .bar__flex {
@@ -582,16 +571,5 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.btn {
-  background-color: var(--color-primary);
-  border-radius: 10px;
-  color: var(--color-white);
-  cursor: pointer;
-  font-size: 1.6rem;
-  font-weight: 700;
-  padding: 1.5rem;
-  width: 10rem;
 }
 /*# sourceMappingURL=main.css.map */
