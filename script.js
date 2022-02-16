@@ -5,9 +5,11 @@
     for (let i = 0; i < elements.length; i++) {
         elements[i].addEventListener('mouseover', () => {
             header.style.top = '80px';
+            header.style.pointerEvents = 'auto';
         });
         elements[i].addEventListener('mouseleave', () => {
             header.style.top = '0';
+            header.style.pointerEvents = 'none';
         });
     }
 }

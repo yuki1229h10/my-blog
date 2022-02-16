@@ -30,6 +30,12 @@
         @include over-link;
     }
 
+    &__under {
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
+    }
+
     &__under-list {
         display: flex;
         list-style: none;
@@ -81,10 +87,15 @@
     left: 0;
     padding: 2rem;
     position: absolute;
+    pointer-events: none;
     top: 0;
     transition: all 0.5s;
     width: 100%;
     z-index: 1;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 
     &__form {
         align-items: center;
@@ -122,16 +133,30 @@
 .content {
     display: flex;
     margin: 4rem 0;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+        margin: 0;
+    }
 }
 
 .details {
     flex: 1;
     margin-right: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-right: 0;
+        padding: 2rem;
+    }
 }
 
 .side {
     flex: 0 1 25%;
     font-size: 1.6rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 0 2rem 2rem 2rem;
+    }
 }
 
 .footer {
@@ -151,6 +176,10 @@
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, 1fr);
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: 1fr;
+    }
 
     &__item {
         background-color: var(--color-white);
