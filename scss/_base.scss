@@ -1,7 +1,6 @@
 :root {
     --color-black: #000;
     --color-cream: #efefef;
-    --color-green: #00fa9a;
     --color-primary: #ff00ff;
     --color-primary-dark: #800080;
     --color-primary-light: pink;
@@ -36,7 +35,7 @@ html {
     font-size: 62.5%;
 
     @media only screen and (max-width: $bp-small) {
-        font-size: 50%;
+        font-size: 40%;
     }
 }
 

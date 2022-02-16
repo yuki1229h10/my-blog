@@ -1,7 +1,6 @@
 :root {
   --color-black: #000;
   --color-cream: #efefef;
-  --color-green: #00fa9a;
   --color-primary: #ff00ff;
   --color-primary-dark: #800080;
   --color-primary-light: pink;
@@ -34,7 +33,7 @@ html {
 
 @media only screen and (max-width: 37.5em) {
   html {
-    font-size: 50%;
+    font-size: 40%;
   }
 }
 
@@ -135,7 +134,7 @@ p {
   height: 100%;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 75em) {
   .header__under {
     display: none;
   }
@@ -207,7 +206,7 @@ p {
   z-index: 1;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 75em) {
   .header-search {
     display: none;
   }
@@ -262,7 +261,7 @@ p {
   margin: 4rem 0;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 75em) {
   .content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -279,7 +278,7 @@ p {
   margin-right: 2rem;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 75em) {
   .details {
     margin-right: 0;
     padding: 2rem;
@@ -293,7 +292,7 @@ p {
   font-size: 1.6rem;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 75em) {
   .side {
     padding: 0 2rem 2rem 2rem;
   }
@@ -481,7 +480,7 @@ p {
   width: 20%;
   height: 3px;
   position: absolute;
-  bottom: -10px;
+  bottom: 0;
   left: 0;
   z-index: 2;
 }
@@ -493,7 +492,7 @@ p {
   width: 100%;
   height: 3px;
   position: absolute;
-  bottom: -10px;
+  bottom: 0;
   left: 0;
   z-index: 1;
 }
