@@ -13,3 +13,19 @@
         });
     }
 }
+
+{
+    const menu = document.getElementById('headerMenu');
+    const side = document.getElementById('headerSide');
+
+    menu.addEventListener('click', () => {
+        if (side.style.display === "none") {
+            side.style.display = "block";
+            setTimeout(function () {
+                side.style.right = '0';
+            }, 1)
+        } else {
+            side.style.display = "none";
+        }
+    });
+}
